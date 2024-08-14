@@ -19,14 +19,14 @@ const HeroSection = () => {
           Download, Distribute wherever you want. Generate unlimited free books.
         </p>
         <div className="flex space-x-4 justify-center">
-          <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-full">
+          <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-105">
             Get Started
           </button>
-          <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-full">
+          <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-105">
             Get API Access
           </button>
         </div>
-        <p className="text-yellow-400 text-sm mt-4">
+        <p className="text-yellow-400 text-sm mt-4 ">
           Attention: TryBookAI has been acquired by Indicus AI. Indicus LLM will be used for text and image generation.
         </p>
       </div>
