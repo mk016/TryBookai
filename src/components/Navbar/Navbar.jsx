@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import HeroSection from '../HeroSeciton/HeroSection';
 import Features from '../Features/Features';
+import Book from '../Card/Book';
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -68,6 +69,10 @@ const Navbar = () => {
   {/* Hero Section */}
   <section id="hero" className="pt-[80px] relative z-10">
  < HeroSection />
+  </section>
+
+  <section>
+    <Book />
   </section>
 
   {/* Features Section */}
