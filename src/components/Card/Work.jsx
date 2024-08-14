@@ -3,12 +3,12 @@ import { IoBookOutline, IoSettingsOutline, IoRocketOutline, IoDownloadOutline } 
 
 function Work() {
   return (
-    <div className=" bg-transparent  text-center rounded-lg p-8 text-white">
-      <h2 className="text-2xl font-bold mb-4">How It Works</h2>
+    <div className=" bg-transparent container mx-auto px-4 text-center rounded-lg p-8 text-white">
+      <h1 className="text-2xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-600">How It Works</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center mt-6">
           <IoBookOutline className="w-16 h-16" />
-          <h3 className="text-lg font-semibold mt-2">Choose Your Genre</h3>
+          <h3 className="text-lg font-semibold ">Choose Your Genre</h3>
           <p className="text-center">Select from a wide range of genres or create a custom blend.</p>
         </div>
         <div className="flex flex-col items-center justify-center">
