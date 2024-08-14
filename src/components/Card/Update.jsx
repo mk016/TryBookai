@@ -3,15 +3,15 @@ import React from 'react';
 
 function NewsCard() {
   return (
-    <div className="md:flex md:justify-center md:items-center min-h-screen ">
-      <div className="bg-white/1 rounded-3xl p-6 md:p-8 max-w-sm md:max-w-md shadow-lg relative text-white">
+    <div className="md:flex md:justify-center md:items-center container mx-auto px-4 mt-9 mb-9">
+      <div className=" backdrop-blur-sm bg-white/10 rounded-3xl p-6 md:p-8 max-w-sm md:max-w-md shadow-lg relative text-white">
         {/* Fire Emoji Icon */}
         <span className="absolute top-4 left-4 text-2xl"></span>
 
     
 
         {/* Card Content */}
-        <h2 className="text-xl md:text-2xl font-bold mt-6">
+        <h2 className="text-xl md:text-2xl font-bold mt-6 mb-5 text-center">
         Stay Updated
 
         </h2>
