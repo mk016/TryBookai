@@ -3,10 +3,10 @@ import Features from '../Features/Features';
 
 const HeroSection = () => {
   return (
-    <section className="flex flex-col min-h-screen mt-[100px] text-white relative">
+    <section className="flex flex-col min-h-full mt-[100px] text-white relative">
       <div className="absolute inset-0 overflow-hidden">
         {/* Background animation */}
-        <div className="absolute inset-0 bg-[url('/path-to-your-stars-background-image.png')] bg-cover opacity-30"></div>
+        <div className="absolute inset-0  bg-cover opacity-30"></div>
       </div>
 
       <div className="relative z-10 text-center">
