@@ -8,6 +8,7 @@ import Update from './components/Card/Update'
 import Footer from './components/Footer/Footer'
 import Video from './components/Card/video'
 import Roadmap from './components/Card/Roadmap'
+import UsersSay from './components/Card/UsersSay'
 function App() {
 
 
@@ -18,6 +19,7 @@ function App() {
     <Work />
     <Video />
     <Roadmap />
+    <UsersSay />
     <Update />
     <Footer />
     </>
