@@ -14,9 +14,9 @@ const SampleBooks = () => {
           Explore some of the captivating books created using our AI technology.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 space-x-2">
           {/* Card 1 */}
-          <div className=" backdrop-blur-sm  bg-white/10 rounded-lg shadow-lg">
+          <div className=" backdrop-blur-sm p-6 bg-white/10 rounded-lg shadow-lg transition-all duration-300 hover:scale-110">
             <img
                 src={img1}
               alt="The Quantum Paradox"
@@ -38,7 +38,7 @@ const SampleBooks = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="backdrop-blur-sm  bg-white/10   rounded-lg shadow-lg">
+          <div className="backdrop-blur-sm  bg-white/10  p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-110">
             <img
              src={img5}
               alt="Whispers in the Mist"
@@ -59,7 +59,7 @@ const SampleBooks = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="backdrop-blur-sm  bg-white/10  rounded-lg shadow-lg">
+          <div className="backdrop-blur-sm  bg-white/10  p-6 rounded-lg shadow-lg transition-all duration-300 hover:scale-110">
             <img
           src={img4}
               alt="Echoes of Eternity"
