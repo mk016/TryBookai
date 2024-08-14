@@ -51,19 +51,19 @@ const Navbar = () => {
     {/* Mobile Menu */}
     <div className={`md:hidden ${navOpen ? 'block' : 'hidden'}`}>
       <ul className="absolute bg-[#1a013a] w-full text-white text-center rounded-xl z-30">
-        <li className="py-4 border-b border-gray-600 rounded-xl"><a href="#features">Features</a></li>
-        <li className="py-4 border-b border-gray-600 rounded-xl"><a href="#howitworks">How It Works</a></li>
-        <li className="py-4 border-b border-gray-600 rounded-xl"><a href="#roadmap">Roadmap</a></li>
-        <li className="py-4 border-b border-gray-600 rounded-xl"><a href="#api">API</a></li>
-        <li className="py-4 border-b border-gray-600 rounded-xl"><a href="#price">Price</a></li>
+        <li className="py-4 border-b border-gray-600 hover:text-gray-600"><a href="#features">Features</a></li>
+        <li className="py-4 border-b border-gray-600 hover:text-gray-600"><a href="#howitworks">How It Works</a></li>
+        <li className="py-4 border-b border-gray-600 hover:text-gray-600"><a href="#roadmap">Roadmap</a></li>
+        <li className="py-4 border-b border-gray-600 hover:text-gray-600"><a href="#api">API</a></li>
+        <li className="py-4 border-b border-gray-600 hover:text-gray-600"><a href="#price">Price</a></li>
         <li className="py-4"><a href="#models">Models</a></li>
-        <li className="py-4">
+        <div className="py-4">
           <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full">
             Login / Sign Up
           </button>
-        </li>
-      </ul>
-    </div>
+        </div>
+    </ul>
+  </div>
   </div>
 
   {/* Hero Section */}
