@@ -6,10 +6,10 @@ function Video() {
     <div className="flex items-center justify-center h-[50vh] mt-20 px-4 mb-20">
       <div className="backdrop-blur-sm bg-white/10 py-20 px-20 rounded-xl">
         <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl  xl:max-w-xl">
-          <img
+          <img 
             src={book2}
             alt="Book Cover"
-            className="w-full h-auto object-contain"
+            className="w-full h-auto object-contain transform transition-transform duration-300 ease-in-out hover:scale-105"
           />
         </div>
       </div>
