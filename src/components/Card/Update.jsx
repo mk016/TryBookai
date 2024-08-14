@@ -27,7 +27,7 @@ function NewsCard() {
         />
 
         {/* Submit Button */}
-        <button className="mt-4 w-full bg-light-blue text-white py-3 rounded-lg font-semibold">
+        <button className="mt-4 w-full bg-light-blue text-white py-3 rounded-lg font-semibold transform transition-transform duration-300 ease-in-out hover:scale-105">
           Submit
         </button>
       </div>
