@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer'
 import Video from './components/Card/video'
 import Roadmap from './components/Card/Roadmap'
 import UsersSay from './components/Card/UsersSay'
+import AppRoutes from './components/Routes/Routes'
 function App() {
 
 
@@ -22,6 +23,7 @@ function App() {
     <UsersSay />
     <Update />
     <Footer />
+
     </>
   )
 }
