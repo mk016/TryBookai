@@ -4,14 +4,16 @@ import { NavLink } from 'react-router-dom';
 import HeroSection from '../HeroSeciton/HeroSection';
 import Features from '../Features/Features';
 import Book from '../Card/Book';
-
+import { useAuth0 } from '@auth0/auth0-react'
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   const handleNav = () => {
     setNavOpen(!navOpen);
   };
+  const { user , loginWithRedirect,isAuthenticated  } = useAuth0()
 
+  console.log("current user", user)
   return (
     <div className="relative min-h-screen">
       {/* Gradient Background */}
@@ -50,9 +52,9 @@ const Navbar = () => {
 
           {/* Login/Signup Button */}
           <div className="hidden md:block">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full">
-              Login / Sign Up
-            </button>
+          {
+            isAuthenticated ? (<button className='bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full'>Logout</button>) : (<button onClick={(e) => loginWithRedirect()} className='bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full'>  Login / Sign Up</button>)
+        }
           </div>
 
           {/* Mobile Menu Button */}
