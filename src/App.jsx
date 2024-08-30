@@ -11,11 +11,13 @@ import Roadmap from './components/Card/Roadmap'
 import UsersSay from './components/Card/UsersSay'
 import AppRoutes from './components/Routes/Routes'
 
+
 function App() {
 
 
   return (
     <>
+      <AppRoutes />
     <Homepage />
     <SampleBooks />
     <Work />
@@ -24,7 +26,7 @@ function App() {
     <UsersSay />
     <Update />
     <Footer />
-    <AppRoutes />
+
     </>
   )
 }
