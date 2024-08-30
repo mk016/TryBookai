@@ -2,7 +2,7 @@ import React from 'react';
 
 const Sidebar = () => {
     return (
-        <div className="bg-gray-900 p-6 w-1/4 min-h-screen text-white">
+        <div className="bg-gray-600 p-6 w-1/4 min-h-full text-white rounded-md m-4 mt-4">
             <h2 className="text-3xl font-bold mb-6">AI Book Generator</h2>
             <div className="mb-4">
                 <label className="block mb-2">Model</label>
