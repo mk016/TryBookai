@@ -2,7 +2,7 @@ import React from 'react';
 
 const MainContent = () => {
     return (
-        <div className="bg-gray-800 p-6 w-3/4 min-h-screen text-white">
+        <div className="bg-gray-800 p-6 w-3/4 min-h-full text-white rounded-md mt-8">
             <div className="flex justify-between items-center mb-4">
                 <h3 className="text-lg font-bold">Chapter One: The Whispers of Uncertainty</h3>
                 <button className="bg-indigo-600 py-2 px-4 rounded">View Saved PDFs</button>
