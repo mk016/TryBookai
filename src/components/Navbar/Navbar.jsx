@@ -36,8 +36,8 @@ const Navbar = () => {
             <NavLink to="/Generate" className={({ isActive }) => isActive ? 'text-gray-400' : 'hover:text-gray-400'}>
             Generate
             </NavLink>
-            <NavLink to="/roadmap" className={({ isActive }) => isActive ? 'text-gray-400' : 'hover:text-gray-400'}>
-              Roadmap
+            <NavLink to="/books" className={({ isActive }) => isActive ? 'text-gray-400' : 'hover:text-gray-400'}>
+              Books
             </NavLink>
             <NavLink to="/api" className={({ isActive }) => isActive ? 'text-gray-400' : 'hover:text-gray-400'}>
               API
