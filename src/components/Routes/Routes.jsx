@@ -5,12 +5,15 @@ import BookGenerate from '../BookGenerator/BookGenerator';
 import Books from '../Books/Books';
 import Home from '../Home/Home';
 import Layout from '../Layout/Layout';
+import Login from '../login/login';
+import Book from '../Card/Book';
 
 const AppRoutes = () => {
   return (
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         <Route 
           path="/Generate" 
           element={
