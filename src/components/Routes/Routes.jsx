@@ -2,21 +2,28 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Generate from '../BookGenerator/Sidebar';
 import BookGenerate from '../BookGenerator/BookGenerator';
+import Books from '../Books/Books';
+import Home from '../Home/Home';
+import Layout from '../Layout/Layout';
 
 const AppRoutes = () => {
   return (
-    <Routes>
-      <Route 
-        path="/Generate" 
-        element={
-          <div className='flex'>
-            <Generate />
-            <BookGenerate />
-          </div>
-        } 
-      />
-      <Route path="*" element={<div>Page Not Found</div>} />
-    </Routes>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route 
+          path="/Generate" 
+          element={
+            <div className='flex'>
+              <Generate />
+              <BookGenerate />
+            </div>
+          } 
+        />
+        <Route path='/books' element={<Books />} />
+        <Route path="*" element={<div>Page Not Found</div>} />
+      </Routes>
+    </Layout>
   );
 };
 
