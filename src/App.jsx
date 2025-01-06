@@ -18,15 +18,6 @@ function App() {
   return (
     <>
       <AppRoutes />
-    <Homepage />
-    <SampleBooks />
-    <Work />
-    <Video />
-    <Roadmap />
-    <UsersSay />
-    <Update />
-    <Footer />
-
     </>
   )
 }
