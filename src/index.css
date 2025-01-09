@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Add these styles to your global CSS */
+body {
+    @apply bg-gradient-to-b from-gray-900 to-gray-800 min-h-screen;
+}
+
+#root {
+    @apply min-h-screen;
+}
+

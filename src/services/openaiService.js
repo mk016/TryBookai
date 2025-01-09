@@ -5,27 +5,56 @@ const openai = new OpenAI({
   dangerouslyAllowBrowser: true
 });
 
-export const generateBookContent = async (bookDetails) => {
-  try {
-    console.log("API Key:", import.meta.env.VITE_OPENAI_API_KEY); // Temporary log to debug
-    
-    const prompt = `Write a ${bookDetails.genre} book about ${bookDetails.topic}. 
-                   Additional details: ${bookDetails.prompt}
-                   Language: ${bookDetails.language}
-                   Style: Creative and engaging`;
+export const generateBookContent = async ({
+    topic,
+    prompt,
+    genre,
+    language,
+    wordCount,
+    tone,
+    model
+}) => {
+    try {
+        if (!import.meta.env.VITE_OPENAI_API_KEY) {
+            throw new Error('OpenAI API key is missing. Please check your .env file.');
+        }
 
-    const response = await openai.chat.completions.create({
-      model: "gpt-4",
-      messages: [{ role: "user", content: prompt }],
-      max_tokens: bookDetails.wordCount * bookDetails.pages,
-      temperature: 0.7,
-    });
+        console.log('OpenAI Service - Starting request with parameters:', {
+            topic,
+            genre,
+            language,
+            wordCount,
+            model
+        });
 
-    return response.choices[0].message.content;
-  } catch (error) {
-    console.error('Error generating book:', error);
-    throw error;
-  }
+        const promptText = `Write a ${genre} book about ${topic}. 
+                         Additional details: ${prompt}
+                         Language: ${language}
+                         Style: Creative and engaging`;
+        
+        console.log('OpenAI Service - Full prompt:', promptText);
+        
+        const response = await openai.chat.completions.create({
+            model: model || "gpt-4",
+            messages: [{ role: "user", content: promptText }],
+            max_tokens: wordCount,
+            temperature: 0.7,
+        });
+
+        console.log('OpenAI Service - Raw response:', response);
+
+        if (!response.choices || !response.choices[0]) {
+            throw new Error('Invalid response from OpenAI');
+        }
+
+        const generatedContent = response.choices[0].message.content;
+        console.log('OpenAI Service - Generated content:', generatedContent.substring(0, 200) + '...');
+        
+        return generatedContent;
+    } catch (error) {
+        console.error('OpenAI API error:', error);
+        throw new Error(`Failed to generate content: ${error.message}`);
+    }
 };
 
 export const generateBookImage = async (bookTitle, description) => {

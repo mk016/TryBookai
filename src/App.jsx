@@ -1,25 +1,24 @@
-import { useState } from 'react'
-
-import './App.css'
-import Homepage from './components/Page/Homepage/Homepage'
-import Work from './components/Card/Work'
-import SampleBooks from './components/Card/SampleBooks'
-import Update from './components/Card/Update'
-import Footer from './components/Footer/Footer'
-import Video from './components/Card/video'
-import Roadmap from './components/Card/Roadmap'
-import UsersSay from './components/Card/UsersSay'
-import AppRoutes from './components/Routes/Routes'
-
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import Generator from './components/Generator';
+import Books from './components/Books/Books';
+import AppRoutes from './components/Routes/Routes';
+import Footer from './components/Footer/Footer';
 
 function App() {
-
-
-  return (
-    <>
-      <AppRoutes />
-    </>
-  )
+    return (
+        <div className="flex flex-col min-h-screen">
+            <Navbar />
+            <main className="flex-grow">
+                <Routes>
+                    <Route path="/*" element={<AppRoutes />} />
+                    <Route path="/generate" element={<Generator />} />
+                    <Route path="/books" element={<Books />} />
+                </Routes>
+            </main>
+            <Footer />
+        </div>
+    );
 }
 
-export default App
+export default App;
